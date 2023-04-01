@@ -16,7 +16,7 @@ import {
   convertHexToRgb,
   getRgbNumbers,
   getColorsBetweenRgbColors,
-} from "js-color-converter";
+} from "color-conversion-tools";
 
 isHex("#ccc"); // true
 
