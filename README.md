@@ -47,3 +47,11 @@ getColorsBetweenRgbColors("rgb(255, 0, 0)", "rgb(0, 128, 0)", 2); // ['rgb(255, 
 | convertRgbToHex           | The function takes RGB and converts it to HEX.                                                  |
 | convertHexToRgb           | The function takes HEX and converts it to RGB.                                                  |
 | getColorsBetweenRgbColors | The function takes two RGB color and generates an array of colors between the two input colors. |
+
+## Authors
+
+[Petros Petrosyan](https://github.com/Petros-Petrosyan)
+
+## License
+
+[MIT](https://github.com/Petros-Petrosyan/color-conversion-tools/blob/main/LICENSE)
