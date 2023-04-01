@@ -1,24 +1,24 @@
-export const isHex = (_hexColor) => {
+const isHex = (_hexColor) => {
   return /^#[a-f0-9]{3}([a-f0-9]{3})?$/i.test(_hexColor);
 };
 
-export const isHsl = (_hslColor) => {
+const isHsl = (_hslColor) => {
   return /^hsl\(\s*\d{1,3}\s*,\s*\d{1,3}%\s*,\s*\d{1,3}%\s*\)$/.test(_hslColor);
 };
 
-export const isCmyk = (_cmykColor) => {
+const isCmyk = (_cmykColor) => {
   return /cmyk\((\d{1,3})%, (\d{1,3})%, (\d{1,3})%, (\d{1,3})%\)*$/.test(
     _cmykColor
   );
 };
 
-export const isRgb = (_rgbColor) => {
+const isRgb = (_rgbColor) => {
   return /^rgba?\(\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/.test(
     _rgbColor
   );
 };
 
-export const getRgbNumbers = (_rgbStr) => {
+const getRgbNumbers = (_rgbStr) => {
   if (!isRgb(_rgbStr)) {
     return [];
   }
@@ -34,7 +34,7 @@ export const getRgbNumbers = (_rgbStr) => {
   return rgb;
 };
 
-export const getHslNumbers = (_hslStr) => {
+const getHslNumbers = (_hslStr) => {
   if (!isHsl(_hslStr)) {
     return [];
   }
@@ -50,7 +50,7 @@ export const getHslNumbers = (_hslStr) => {
   return hsl;
 };
 
-export const getCmykNumbers = (_cmykStr) => {
+const getCmykNumbers = (_cmykStr) => {
   if (!isCmyk(_cmykStr)) {
     return [];
   }
@@ -67,7 +67,7 @@ export const getCmykNumbers = (_cmykStr) => {
   return cmyk;
 };
 
-export const convertRgbToCmyk = (_rgbStr) => {
+const convertRgbToCmyk = (_rgbStr) => {
   if (!isRgb(_rgbStr)) {
     return null;
   }
@@ -86,7 +86,7 @@ export const convertRgbToCmyk = (_rgbStr) => {
   return `cmyk(${c * 100}%, ${m * 100}%, ${y * 100}%, ${k * 100}%)`;
 };
 
-export const convertCmykToRgb = (_cmykStr) => {
+const convertCmykToRgb = (_cmykStr) => {
   if (!isCmyk(_cmykStr)) {
     return null;
   }
@@ -118,7 +118,7 @@ export const convertCmykToRgb = (_cmykStr) => {
   return `rgb(${r}, ${g}, ${b})`;
 };
 
-export const convertRgbToHsl = (_rgbStr) => {
+const convertRgbToHsl = (_rgbStr) => {
   if (!isRgb(_rgbStr)) {
     return null;
   }
@@ -163,7 +163,7 @@ export const convertRgbToHsl = (_rgbStr) => {
   return `hsl(${h}, ${s * 100}%, ${l * 100}%)`;
 };
 
-export const convertHslToRgb = (_hslStr) => {
+const convertHslToRgb = (_hslStr) => {
   if (!isHsl(_hslStr)) {
     return null;
   }
@@ -213,7 +213,7 @@ export const convertHslToRgb = (_hslStr) => {
   return `rgb(${r}, ${g}, ${b})`;
 };
 
-export const convertRgbToHex = (_rgbStr) => {
+const convertRgbToHex = (_rgbStr) => {
   if (!isRgb(_rgbStr)) {
     return null;
   }
@@ -231,7 +231,7 @@ export const convertRgbToHex = (_rgbStr) => {
   return "#" + r + g + b;
 };
 
-export const convertHexToRgb = (_hex) => {
+const convertHexToRgb = (_hex) => {
   if (!isHex(_hex)) {
     return null;
   }
@@ -288,4 +288,21 @@ export const getColorsBetweenRgbColors = (_rgbStr1, _rgbStr2, steps) => {
   }
 
   return interpolatedColorArray;
+};
+
+module.exports = {
+  isHex,
+  isHsl,
+  isCmyk,
+  isRgb,
+  getRgbNumbers,
+  getHslNumbers,
+  getCmykNumbers,
+  convertRgbToCmyk,
+  convertCmykToRgb,
+  convertRgbToHsl,
+  convertHslToRgb,
+  convertRgbToHex,
+  convertHexToRgb,
+  getColorsBetweenRgbColors,
 };
