@@ -253,7 +253,7 @@ const convertHexToRgb = (_hex) => {
   return `rgb(${+r}, ${+g}, ${+b})`;
 };
 
-export const getColorsBetweenRgbColors = (_rgbStr1, _rgbStr2, steps) => {
+const getColorsBetweenRgbColors = (_rgbStr1, _rgbStr2, steps) => {
   if (!isRgb(_rgbStr1) || !isRgb(_rgbStr2) || typeof +steps !== "number") {
     return [];
   }
