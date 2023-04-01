@@ -1,0 +1,44 @@
+{
+  "name": "color-conversion-tools",
+  "version": "1.0.0",
+  "description": "This NPM package provides a JavaScript library of functions for converting between different color formats. With this package, you can convert RGB to Hex, Hex to RGB, RGB to HSL, HSL to RGB, RGB to CMYK, CMYK to RGB, and many other color formats. | utility functions to convert colors | color representation methods | color code conversion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Petros-Petrosyan/color-conversion-tools.git"
+  },
+  "keywords": [
+    "hex",
+    "hsl",
+    "cmyk",
+    "rgb",
+    "RGB",
+    "Hex",
+    "HSL",
+    "CMYK",
+    "color conversion tools",
+    "color code conversion",
+    "colors",
+    "converter",
+    "color converter",
+    "color manipulation",
+    "color formats",
+    "color code",
+    "color transformation",
+    "color utility",
+    "color functions",
+    "color tools"
+  ],
+  "author": "Petros Petrosyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Petros-Petrosyan/color-conversion-tools/issues"
+  },
+  "homepage": "https://github.com/Petros-Petrosyan/color-conversion-tools#readme",
+  "dependencies": {
+    "typescript": "^5.0.3"
+  }
+}
